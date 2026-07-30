@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hebrew Flashcards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">◆</span>
+      <span class="brand-text">Card Catalog</span>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab is-active" data-view="cards" role="tab" aria-selected="true">Cards</button>
+      <button class="tab" data-view="quiz" role="tab" aria-selected="false">Quiz</button>
+      <button class="tab" data-view="quiz-text" role="tab" aria-selected="false">Quiz: Text</button>
+    </nav>
+  </header>
+
+  <main id="cards-view" class="view is-active">
+    <div id="grid" class="grid"></div>
+    <p id="empty-msg" class="empty-msg" hidden>No cards yet — add some entries to <code>data.js</code>.</p>
+  </main>
+
+  <main id="quiz-view" class="view quiz">
+    <div class="quiz-topbar">
+      <span class="quiz-count" id="quiz-count">1 / 1</span>
+      <button id="shuffle-btn" class="ghost-btn" title="Shuffle order">⤮ Shuffle</button>
+    </div>
+
+    <button id="quiz-card" class="quiz-card" aria-label="Play sound">
+      <div class="quiz-emoji" id="quiz-emoji">🍎</div>
+      <div class="quiz-word" id="quiz-word">תפוח</div>
+      <div class="quiz-hint">tap to hear it</div>
+    </button>
+
+    <div class="quiz-nav">
+      <button id="prev-btn" class="nav-btn" aria-label="Previous card">‹</button>
+      <button id="next-btn" class="nav-btn" aria-label="Next card">›</button>
+    </div>
+  </main>
+
+  <main id="quiz-text-view" class="view quiz">
+    <div class="quiz-topbar">
+      <span class="quiz-count" id="quiz-text-count">1 / 1</span>
+      <button id="quiz-text-shuffle-btn" class="ghost-btn" title="Shuffle order">⤮ Shuffle</button>
+    </div>
+
+    <button id="quiz-text-card" class="quiz-card" aria-label="Play sound">
+      <div class="quiz-word" id="quiz-text-word">תפוח</div>
+      <div class="quiz-hint">tap to hear it</div>
+    </button>
+
+    <div class="quiz-nav">
+      <button id="quiz-text-prev-btn" class="nav-btn" aria-label="Previous card">‹</button>
+      <button id="quiz-text-next-btn" class="nav-btn" aria-label="Next card">›</button>
+    </div>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
