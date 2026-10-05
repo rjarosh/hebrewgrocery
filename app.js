@@ -352,12 +352,3 @@
     }
   });
 })();
-```
-
-One **CSS addition** is still recommended for the new emoji mode so the emoji is substantially larger than the Hebrew text:
-
-```css
-.quiz-emoji-only {
-  font-size: clamp(5rem, 15vw, 10rem);
-  line-height: 1;
-}
