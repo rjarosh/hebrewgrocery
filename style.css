@@ -272,6 +272,8 @@ button { font-family: inherit; }
   z-index: 50;
 }
 
+.quiz-emoji-only { font-size: clamp(5rem, 15vw, 10rem); line-height: 1; }
+
 /* ── Small screens ────────────────────────────────────────── */
 @media (max-width: 480px) {
   .grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
