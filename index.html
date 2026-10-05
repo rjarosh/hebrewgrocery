@@ -16,10 +16,12 @@
       <span class="brand-mark">◆</span>
       <span class="brand-text">Card Catalog</span>
     </div>
+
     <nav class="tabs" role="tablist">
       <button class="tab is-active" data-view="cards" role="tab" aria-selected="true">Cards</button>
       <button class="tab" data-view="quiz" role="tab" aria-selected="false">Quiz</button>
       <button class="tab" data-view="quiz-text" role="tab" aria-selected="false">Quiz: Text</button>
+      <button class="tab" data-view="quiz-emoji" role="tab" aria-selected="false">Quiz: Emoji</button>
     </nav>
   </header>
 
@@ -63,9 +65,27 @@
     </div>
   </main>
 
+  <main id="quiz-emoji-view" class="view quiz">
+    <div class="quiz-topbar">
+      <span class="quiz-count" id="quiz-emoji-count">1 / 1</span>
+      <button id="quiz-emoji-shuffle-btn" class="ghost-btn" title="Shuffle order">⤮ Shuffle</button>
+    </div>
+
+    <button id="quiz-emoji-card" class="quiz-card" aria-label="Play sound">
+      <div class="quiz-emoji quiz-emoji-only" id="quiz-emoji-only">🍎</div>
+      <div class="quiz-hint">tap to hear it</div>
+    </button>
+
+    <div class="quiz-nav">
+      <button id="quiz-emoji-prev-btn" class="nav-btn" aria-label="Previous card">‹</button>
+      <button id="quiz-emoji-next-btn" class="nav-btn" aria-label="Next card">›</button>
+    </div>
+  </main>
+
   <div id="toast" class="toast" hidden></div>
 
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
+
